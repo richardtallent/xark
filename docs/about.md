@@ -2,7 +2,7 @@
 
 ## Why Another Standard?
 
-GEDCOM, GEDCOM X, FHISO ELF, and other initiatives have focused on modeling and storing the _conclusions_ of our genealogical efforts. These conclusions, while important, do not address a significant need to also model the _evidence itself_. They all have been bogged down in the same mental mode as GEDCOM -- the idea that all of our data should reside in the One Big Family History File. This is an antiquated and unsustainable way to model both evidence and conclusions.
+GEDCOM, GEDCOM X, FHISO ELF, and other initiatives have focused on modeling and storing the _conclusions_ of our genealogical efforts. These conclusions, while important, do not address a significant need to also model the _evidence itself_. They all have been bogged down in the same mental model as GEDCOM -- the idea that all of our data should reside in the One Big Family History File. This is an antiquated and unsustainable way to model both evidence and conclusions.
 
 There are other possible use cases as well, from legal research to organizing character and place information for writing or analyzing fiction.
 
