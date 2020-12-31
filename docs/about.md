@@ -20,6 +20,6 @@ XARK's data model is purposefully very simple. There are only four "record" type
 
 3. [Claims](./claims). A single piece of information about a `Subject` derived from the `Artifact`.
 
-4. [Events](./events). Not surprisingly, thie represents an event. In XARK, "events" are "geotemporal" -- _i.e._, they involve both a place and a time.
+4. [Events](./events). Not surprisingly, this represents an event. In XARK, "events" are geospacial (having a place) and temporal (having a time).
 
 The data model is also fairly "flat" -- there is no strict "hierarchy," other than that _all_ `Subjects`, `Claims`, and `Events` must have a parent `Artifact`, and they _only_ belong to that `Artifact`. For example, if "Joe Brown" is mentioned in two source documents, there are two Joe Brown `subjects` -- one for each artifact -- even if you as the researcher believe them to represent the same human being. (XARK can also be used to make your claim that those two people are the same -- that will be explained later.)
