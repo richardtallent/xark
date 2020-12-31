@@ -1,0 +1,52 @@
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	xmlns:owl="http://www.w3.org/2002/07/owl#"
+	xmlns:dc="http://purl.org/dc/elements/1.1/">
+
+	<owl:Ontology rdf:about="http://www.xark.org/xark">
+		<dc:title>The Extensible Archival Record Knowledgebase (XARK) Ontology</dc:title>
+		<dc:description>
+			An ontology for abstracting the persons, events, places, and things recorded in
+			photographs, documents, and other items of historical research or genealogical
+			interest.
+		</dc:description>
+	</owl:Ontology>
+
+	<owl:Class rdf:about="http://www.xark.org/#subject">
+		<rdfs:label>Subject</rdfs:label>
+		<rdfs:comment>A common class for nouns of historical interest.</rdfs:comment>
+	</owl:Class>
+
+	<owl:Class rdf:about="http://www.xark.org/xark#person">
+		<rdfs:subClassOf rdf:resource="http://www.xark.org/xark#subject" />
+		<rdfs:label>Person</rdfs:label>
+		<rdfs:comment>A class describing a named or numbered person.</rdfs:comment>
+	</owl:Class>
+
+	<owl:DatatypeProperty rdf:about="http://www.xark.org/xark#name"/>
+
+	<owl:Class rdf:about="http://www.xark.org/xark#event">
+		<rdfs:subClassOf rdf:resource="http://www.xark.org/xark#subject" />
+		<rdfs:label>Event</rdfs:label>
+		<rdfs:comment>A class describing an event.</rdfs:comment>
+	</owl:Class>
+
+	<owl:Class rdf:about="http://www.xark.org/xark#place">
+		<rdfs:subClassOf rdf:resource="http://www.xark.org/xark#subject" />
+		<rdfs:label>Place</rdfs:label>
+		<rdfs:comment>A class describing an current or historical place.</rdfs:comment>
+	</owl:Class>
+
+	<owl:Class rdf:about="http://www.xark.org/xark#thing">
+		<rdfs:subClassOf rdf:resource="http://www.xark.org/xark#subject" />
+		<rdfs:label>Thing</rdfs:label>
+		<rdfs:comment>A class describing a physical object.</rdfs:comment>
+	</owl:Class>
+
+	<owl:Class rdf:about="http://www.xark.org/xark#organization">
+		<rdfs:subClassOf rdf:resource="http://www.xark.org/xark#subject" />
+		<rdfs:label>Organization</rdfs:label>
+		<rdfs:comment>A class describing a group of persons acting in concert.</rdfs:comment>
+	</owl:Class>
+
+</rdf:RDF>
