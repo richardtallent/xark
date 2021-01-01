@@ -1,8 +1,8 @@
-import { XarkId } from "./Aliases";
+import { XarkId } from "./ValueTypes"
 
 interface IRecord {
-	id: XarkId;
-	revisionId: XarkId;
+	id: XarkId
+	revisionId: XarkId
 }
 
-export { IRecord };
+export { IRecord }

@@ -12,7 +12,7 @@
 		</dc:description>
 	</owl:Ontology>
 
-	<owl:Class rdf:about="http://www.xark.org/#subject">
+	<owl:Class rdf:about="http://www.xark.org/xark#subject">
 		<rdfs:label>Subject</rdfs:label>
 		<rdfs:comment>A common class for nouns of historical interest.</rdfs:comment>
 	</owl:Class>

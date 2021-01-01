@@ -1,12 +1,17 @@
-import { ISubject } from "./ISubject";
-import { IClaim } from "./IClaim";
-import { IEvent } from "./IEvent";
-import { IRecord } from "./IRecord";
+import { ISubject } from "./ISubject"
+import { IClaim } from "./IClaim"
+import { IEvent } from "./IEvent"
+import { IRecord } from "./IRecord"
 
-interface IArtifact extends IRecord {
-	subjects?: ISubject[];
-	claims?: IClaim[];
-	events?: IEvent[];
+interface IRange {
+	start: number
+	end: number
 }
 
-export { IArtifact };
+interface IArtifact extends IRecord {
+	range?: IRange
+	subjects?: ISubject[]
+	events?: IEvent[]
+}
+
+export { IArtifact, IRange }

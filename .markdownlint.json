@@ -1,0 +1,12 @@
+{
+  "line-length": false,
+  "no-inline-html": {
+    "allowed_elements": ["Playground", "Youtube", "kbd"]
+  },
+  "single-title": {
+    "front_matter_title": ""
+  },
+  "no-hard-tabs": {
+	  "code_blocks": false
+  }
+}

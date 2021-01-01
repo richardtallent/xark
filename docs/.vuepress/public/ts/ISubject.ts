@@ -1,10 +1,10 @@
-import { XarkId, XarkUri } from "./Aliases";
-import { IRecord } from "./IRecord";
+import { XarkUri } from "./ValueTypes"
+import { IRecord } from "./IRecord"
+import { IClaim } from "./IClaim"
 
 interface ISubject extends IRecord {
-	id: XarkId;
-	revisionId: XarkId;
-	type: XarkUri;
+	type: XarkUri
+	claims?: IClaim[]
 }
 
-export { ISubject };
+export { ISubject }
