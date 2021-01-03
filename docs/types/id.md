@@ -1,4 +1,4 @@
-# XARK IDs
+# XarkId
 
 Everything XARK record has a globally-unique `id` property (which does not change) as well as a globally-unique `revisionId` field (which changes each time the record is modified).
 
@@ -33,8 +33,6 @@ The values used for this field are generated in a specific manner to help ensure
 | 56-59  | `1000b` GUID Variant `10` and static bits `00`                 |
 | 60-127 | Randomly-generated bits 52-119                                 |
 
-A valid GUID encoding can be generated using the `RT.Comb` library with the `PostgreSqlCombProvider` and `UnixTimestampProvider` options.
-
 ## Normal String Encoding
 
 For string serializations that support traditional representations of a GUID as a string (_i.e._, as hexadecimal with optional `-` separators and no guarantee of starting with a letter), this is permitted. Lowercase letters should be preferred.
@@ -49,6 +47,10 @@ Base64 also requires a trailing `=`, but that should not be included.
 
 Because the timestamp comes first and will have very small most significant bit values for many centuries to come, `Base64` encoding will result in a value that starts with a letter.
 
+## Implementations
+
+The reference implementation is built in .NET 5, called [RT.XarkId](https://github.com/richardtallent/RT.XarkId).
+
 ## Compatibility
 
 - Software **must** support reading both encodings.
@@ -58,10 +60,6 @@ Because the timestamp comes first and will have very small most significant bit 
 - Software **must not** generate timestamps using any means other than the _current_ system time.
 - Software **may** allow the user to choose the encoding form they want and normalize to that form.
 - Software **must** use the compact form when saving to GEDCOM files unless the GEDCOM variant supports the long UUID form.
-
-## Implementations
-
-The reference implementation is built in .NET 5, called [RT.XarkId](https://github.com/richardtallent/RT.XarkId).
 
 ## Checksum UUIDs
 
@@ -75,5 +73,7 @@ This document does not attempt to standardize how one would go about performing 
 
 ## References
 
-[EAD ID](https://www.loc.gov/ead/EAD3taglib/index.html)
-[URI Unreserved Characters](https://tools.ietf.org/html/rfc3986#section-2.3)
+- [EAD ID](https://www.loc.gov/ead/EAD3taglib/index.html)
+- [URI Unreserved Characters](https://tools.ietf.org/html/rfc3986#section-2.3)
+- [GEDCOM Identifiers](https://www.tamurajones.net/GEDCOMIdentifiersLength.xhtml)
+- [HTML IDs / Names](https://stackoverflow.com/questions/1077084/what-characters-are-allowed-in-dom-ids)

@@ -25,7 +25,12 @@ module.exports = {
 			{
 				title: "Structure",
 				collapsable: false,
-				children: ["/artifacts", "/subjects", "/claims", "/notes", "/events", "/value-types"],
+				children: ["/artifacts", "/subjects", "/claims", "/notes", "/events"],
+			},
+			{
+				title: "Value Types",
+				collapsable: false,
+				children: ["types/basic", "/types/id", "/types/date", "types/uri", "/types/position"],
 			},
 			"/compatibility",
 			"/history",
